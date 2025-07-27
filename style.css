@@ -1,0 +1,60 @@
+/* variables */
+:root{
+    --primary-color: #ffffff;
+    --text-color: #6c6c6d;
+    --black: #1e1e1e;
+    --white: #f5f5f7 ;
+    --cozy-padding: 16;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* background-color: #6c6c6d; */
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.nav{
+    background-color: var(--black);
+    /* width: 375px;  */
+    height: 40px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.nav .right-icons{
+    display: flex;
+    flex-direction: row;
+}
+
+.icon-wrapper{
+    width: fit-content;
+    /* height: fit-content; */
+
+    display: grid;
+
+    background-color: var(--white);
+
+    justify-content: center;
+    align-items: center;
+    
+    padding: 8px; 
+}
+
+.post{
+    height: 436px; 
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
+.button{
+    width: 85px; 
+    height: 35px;
+    background-color: rgb(32, 97, 202);
+}
