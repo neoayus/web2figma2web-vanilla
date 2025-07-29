@@ -41,7 +41,6 @@
     /* height: fit-content; */
 
     display: grid;
-
     /* background-color: var(--white); */
 
     justify-content: center;
@@ -139,29 +138,34 @@
 
 /* slider  */
 .slider{
-    height: 526px; 
+    /* height: auto; */
+    /* height: 526px;  */
+    height: 100%; 
     width: auto;
-    background-color: pink;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
-        /* <div class="slider-post"></div>
-        <div class="slider-buttons"></div> */
+
 .slider .slider-post{
-    flex: 1; 
-    height: auto;
-    background-color: rgb(196, 101, 117); 
+    /* flex: 1;  */
+    height: 526px; 
     position: relative;
     top: 0; 
 }
-.slider .slider-buttons{
-    height: 7%;
-    background-color: rgb(218, 158, 168); 
+
+.slider-buttons{
+    height: 40px; 
     display: flex;
     gap: 12px;
     justify-content: center;
     align-items: center;
     bottom: 100px;;
+
+    position: relative;
+    top: 0; 
+    left: 0; 
+    z-index: 1; 
 }
 
 .button-tiny-oval{
@@ -171,12 +175,72 @@
     background-color: var(--text-color);
 }
 
-/* style: buttons on slider post: left and right vectors :  */
-            /* <div class="post-switch">
-                <div class="switch-button left">
-                    <div class="icon-wrapper arrow-left"></div>
-                </div>
-                <div class="switch-button right">
-                    <div class="icon-wrapper arrow-right"></div>
-                </div>
-            </div> */
+/* style:  left and right vectors :  */
+.post-switch{
+    width: 100%; 
+    height: 100%; 
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    z-index: 1; 
+
+}
+.post-switch .switch-button{
+    width: 32px; 
+    height: 100%; 
+    background-color: rgba(128, 128, 128, 0.508);
+    display: flex;
+}
+
+.poster{
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position:center;
+    color: white; 
+    height: 526px; 
+    width: auto;
+    
+    display: flex;
+    flex-direction: column; 
+    text-align: center;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;  
+    
+    padding-bottom: 36px;
+
+    flex: 0 0 auto ; 
+}
+.poster-genre{
+    font-size: 16px;
+    font-weight: 500;
+}
+.poster-desc{
+    font-size: 16px;
+}
+.button.post-button{
+    background-color: white;
+    color: black; 
+    border: 0;  
+}
+
+.slider-post{
+    position: relative;
+}
+
+.slider-post-container{
+    width: 100%; 
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    z-index: 1; 
+    /* flex: 0 0 auto ;  */
+}
