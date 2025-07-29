@@ -5,6 +5,8 @@
     --black: #1e1e1e;
     --white: #f5f5f7 ;
     --cozy-padding: 16;
+    --blue: #0071e3;
+    --gradient : linear-gradient(90deg, rgba(3, 162, 255, 1) 18%, rgba(174, 50, 212, 1) 48%, rgba(225, 17, 38, 1) 83%);
 }
 
 *{
@@ -15,10 +17,12 @@
     font-family: "Roboto", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
+    
+    /* overflow-y: auto; */
 }
 
 .nav{
-    background-color: var(--black);
+    /* background-color: var(--black); */
     /* width: 375px;  */
     height: 40px;
     margin: 0 auto;
@@ -38,7 +42,7 @@
 
     display: grid;
 
-    background-color: var(--white);
+    /* background-color: var(--white); */
 
     justify-content: center;
     align-items: center;
@@ -46,15 +50,133 @@
     padding: 8px; 
 }
 
+.post-container{
+    background-color: pink ; 
+    /* padding-top: 12px ; */
+    padding-bottom: 12px ;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;     
+
+}
+
 .post{
+    text-align: center;
     height: 436px; 
     background-position: center;
     background-size:cover;
     background-repeat: no-repeat;
+    
+    display: flex; 
+    flex-direction: column;
+    /* justify-content: space-evenly; */
+    /* align-items: center; */
+    gap: 16px; 
+    
+    padding-top: 40px; 
 }
 
-.button{
-    width: 85px; 
-    height: 35px;
-    background-color: rgb(32, 97, 202);
+.post.black-bg .heading-main,
+.post.post.black-bg .heading-sub{
+    color: white; 
+} 
+
+.post.pos-down{
+    flex-direction: column-reverse;
+    padding-top: 0px; 
+    padding-bottom: 40px; 
 }
+
+.post-button{
+    display: flex;    
+    flex-direction: row;
+    justify-content: center;
+    gap: 12px;
+}
+
+.heading-main{
+    font-size: 28px;
+    font-weight: 450;
+}
+.heading-sub{
+    font-size: 16px;
+}
+.heading-grad{
+    font-size: 12px;
+    font-weight: 500;
+}
+.button{
+    /* width: 85px;  */
+    height: 35px;
+    border: 0; 
+    color: var(--white);
+    padding:6px 12px;
+    border-radius: 99px;
+    font-size: 12px ;
+    display: inline-block; 
+    white-space: nowrap;
+    justify-content: center;
+}
+.button.primary{
+    background-color:var(--blue);
+    align-items: center;
+}
+.button.secondary{
+    background-color: transparent;
+    color:var(--blue);  
+    border: solid 0.8px var(--blue);
+    /* display: inline-block; */
+}
+
+.heading-grad{
+    background: var(--gradient);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    display: inline-block;
+}
+
+
+/* slider  */
+.slider{
+    height: 526px; 
+    width: auto;
+    background-color: pink;
+    display: flex;
+    flex-direction: column;
+}
+        /* <div class="slider-post"></div>
+        <div class="slider-buttons"></div> */
+.slider .slider-post{
+    flex: 1; 
+    height: auto;
+    background-color: rgb(196, 101, 117); 
+    position: relative;
+    top: 0; 
+}
+.slider .slider-buttons{
+    height: 7%;
+    background-color: rgb(218, 158, 168); 
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+    bottom: 100px;;
+}
+
+.button-tiny-oval{
+    width: 8px; 
+    height: 8px; 
+    border-radius: 99px;
+    background-color: var(--text-color);
+}
+
+/* style: buttons on slider post: left and right vectors :  */
+            /* <div class="post-switch">
+                <div class="switch-button left">
+                    <div class="icon-wrapper arrow-left"></div>
+                </div>
+                <div class="switch-button right">
+                    <div class="icon-wrapper arrow-right"></div>
+                </div>
+            </div> */
