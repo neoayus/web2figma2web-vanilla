@@ -203,19 +203,19 @@
     background-position:center;
     color: white; 
     height: 526px; 
-    width: auto;
+    width: 100vw;
     
     display: flex;
     flex-direction: column; 
     text-align: center;
     align-items: center;
     justify-content: flex-end;
-    gap: 12px;  
-    
     padding-bottom: 36px;
+    gap: 12px;  
 
     flex: 0 0 auto ; 
 }
+
 .poster-genre{
     font-size: 16px;
     font-weight: 500;
@@ -241,6 +241,6 @@
     position: absolute;
     top: 0; 
     left: 0; 
-    z-index: 1; 
-    /* flex: 0 0 auto ;  */
+    z-index: 1;  
+    flex: 0 0 auto ; 
 }
