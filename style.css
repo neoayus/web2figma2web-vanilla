@@ -264,4 +264,30 @@ div > ol{
 
 
 /* ====================================================== */
-/* Animating shyt */
+/* animation basics */
+.hidden{
+    display: none; 
+}
+
+/* nav dropdown */
+.nav.open{
+    /* height: 100vh; 
+    background-color: pink; */
+}
+
+.nav-list{
+    /* remove me if neede  */
+    height: 100vh; 
+
+    list-style-type: none;
+    font-size: 32px; 
+    font-weight: 450;
+    padding: 30px 0 0 40px; 
+    line-height: 1.4;
+}
+
+/* style for 'new' cross icon */
+.icon.cross{
+    margin-left: auto;
+    padding: 12px 12px 12px 0 ;  
+}
