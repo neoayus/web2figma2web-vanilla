@@ -1,11 +1,34 @@
 // secondary cta(call to action)
-let sb = document.querySelectorAll(".button.secondary");
-sb.forEach((button)=>{
-    button.addEventListener('touchstart', ()=>{
-        console.log('count me !');
-        button.classList.remove("secondary");
-        button.classList.add("primary");
-    })
+// let sb = document.querySelectorAll(".button.secondary");
+// sb.forEach((button)=>{
+//     button.addEventListener('touchstart', ()=>{
+//         button.classList.remove("secondary");
+//         button.classList.add("primary");
+//     })
+// });
+
+// //  primary cta(call to action)
+// let pb = document.querySelectorAll(".button.primary");
+// pb.forEach((button)=>{
+//     button.addEventListener('touchstart', ()=>{
+//         button.classList.remove("primary");
+//         button.classList.add("secondary");
+//     })
+// });
+// 
+
+// toggle bw primary and secondary button : 
+let btn = document.querySelectorAll(".primary, .secondary");
+btn.forEach((button)=>{
+    button.addEventListener('touchstart',()=>{
+        if(button.classList.contains('primary')){
+            button.classList.remove('primary');
+            button.classList.add('secondary');
+        }else if(button.classList.contains('secondary')){
+            button.classList.remove('secondary');
+            button.classList.add('primary');
+        }
+    });
 });
 
 // Hamburger button CTA: 
