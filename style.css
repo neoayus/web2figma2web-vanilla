@@ -291,3 +291,9 @@ div > ol{
     margin-left: auto;
     padding: 12px 12px 12px 0 ;  
 }
+
+/* to disable scroll on body  */
+body.noscroll{
+    overflow: hidden;
+    height: 100vh; 
+}

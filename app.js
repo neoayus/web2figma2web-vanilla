@@ -28,6 +28,10 @@ ham.addEventListener('touchstart',()=>{
     // nav dropdown list 
     let list = document.querySelector(".nav-list");
     list.classList.remove("hidden");
+    
+    // disable scroll on body : 
+    document.body.classList.add("noscroll");
+    
 });
 
 // Cross Button CTA: 
@@ -51,4 +55,7 @@ cross.addEventListener('touchstart',()=>{
     iconsToUnHide.forEach((icon)=>{
         icon.classList.remove("hidden");
     });
+
+    //  remove scroll lock : 
+    document.body.classList.remove("noscroll");
 });
