@@ -82,3 +82,39 @@ cross.addEventListener('touchstart',()=>{
     //  remove scroll lock : 
     document.body.classList.remove("noscroll");
 });
+
+// Slider function 
+// make it slide
+let left = document.querySelector(".left.slider-nav-btn");
+let right = document.querySelector(".right.slider-nav-btn");
+let sliderTrack = document.querySelector(".slider-track-inner"); 
+vw = document.documentElement.clientWidth; 
+let locX = 0; 
+
+left.addEventListener('touchstart', ()=>{
+    if(!(locX > 0)){
+        if(locX == 0){
+            console.log("can't load any more posters to right ");
+        }else{
+            console.log("Else Block: X Value " + locX);
+            sliderTrack.style.transform = `translateX(${locX - -vw}px)`;
+            // locX = locX+ -vw; 
+            locX-= -vw; 
+            console.log("Else Block: X Value " + locX);
+        }
+    }
+})
+
+right.addEventListener('touchstart', ()=>{
+    // to check if we are on the first or last poster 
+    if(!(locX <= -(vw*9))){
+        if(locX == 0){
+            sliderTrack.style.transform = `translateX(-${vw}px)`;
+            locX = -vw; 
+        }else{
+            sliderTrack.style.transform = `translateX(${locX + -vw}px)`;
+            // locX = locX+ -vw; 
+            locX+= -vw; 
+        }
+    }
+})
