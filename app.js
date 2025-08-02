@@ -121,3 +121,39 @@ right.addEventListener('touchstart', ()=>{
         }
     }
 })
+
+/* pagination buttons cta  */
+let pag01 = document.querySelector(".pagination-dot.one");
+let pag02 = document.querySelector(".pagination-dot.two");
+let pag03 = document.querySelector(".pagination-dot.three");
+let pag04 = document.querySelector(".pagination-dot.four");
+let pag05 = document.querySelector(".pagination-dot.five");
+let pag06 = document.querySelector(".pagination-dot.six");
+let pag07 = document.querySelector(".pagination-dot.seven");
+let pag08 = document.querySelector(".pagination-dot.eight");
+let pag09 = document.querySelector(".pagination-dot.nine");
+let pag10 = document.querySelector(".pagination-dot.ten");
+
+let pagButtons = [pag01,pag02,pag03,pag04,pag05,pag06,pag07,pag08,pag09,pag10];
+
+pagButtons.forEach((button, index)=>{
+    button.addEventListener('touchstart',()=>{
+        if(index == 0){
+            sliderTrack.style.transform = `translateX(${0}px)`;
+            locX = 0; 
+        }else{
+            sliderTrack.style.transform = `translateX(${- index * vw}px)`;
+            locX = - index * vw ; 
+        }
+            button.classList.add("clicked");
+
+        // change color of page numbered-block
+        for(var x=0; x<pagButtons.length; x++){
+            pagButtons[x].classList.remove("clicked");
+            if(x === index){
+                pagButtons[x].classList.add("clicked");
+            }
+        }
+    })
+});
+

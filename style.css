@@ -298,3 +298,8 @@ body.noscroll{
     overflow: hidden;
     height: 100vh; 
 }
+
+/* paginated button color  */
+.clicked{
+    background-color: #1e1e1e;
+}
