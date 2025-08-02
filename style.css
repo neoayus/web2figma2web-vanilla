@@ -219,11 +219,12 @@
 footer{
     background-color:var(--white);
     width: 100vw; 
-    height: 1000px; /* temp */
     color: var(--text-color);
     font-size: 12px;
     font-weight: 350;
     padding: 16px;
+    /* /* allow normal page vertical scrolling when interacting with footer / solved the scroll problem! */
+    overflow-y: clip;
 }
 
 /* footer: terms and conditions */
