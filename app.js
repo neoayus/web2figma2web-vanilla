@@ -1,3 +1,8 @@
+// Strict the whole content's width to the vw :   
+vw = document.documentElement.clientWidth; 
+// document.body.style.width = `${vw}px`;
+// document.body.style.overflowX = "hidden";
+
 // secondary cta(call to action)
 // let sb = document.querySelectorAll(".button.secondary");
 // sb.forEach((button)=>{
@@ -96,11 +101,9 @@ left.addEventListener('touchstart', ()=>{
         if(locX == 0){
             console.log("can't load any more posters to right ");
         }else{
-            console.log("Else Block: X Value " + locX);
             sliderTrack.style.transform = `translateX(${locX - -vw}px)`;
             // locX = locX+ -vw; 
             locX-= -vw; 
-            console.log("Else Block: X Value " + locX);
         }
     }
 })
