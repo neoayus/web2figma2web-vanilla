@@ -235,26 +235,6 @@ div > ol{
     border-bottom: .8px solid var(--text-color) ; 
 }
 
-/* footer: drop down menu */
-.footer-nav-dd > ul{
-    list-style-type: none;
-}
-
-.footer-nav-dd > ul li{
-    border-bottom: .6px solid var(--text-color) ; 
-    display: flex; 
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 10px 8px; 
-    align-items: center;
-    color: var(--black);
-}
-
-.footer-nav-title{
-    font-size: 12px;
-    font-weight: 350;
-}
-
 /* footer: bottom text */
 .footer-bottom-text{
     padding-top: 20px ;
@@ -278,7 +258,7 @@ div > ol{
 }
 
 .nav-list{
-    /* remove me if neede  */
+/* remove me if needek  */
     height: 100vh; 
 
     list-style-type: none;
@@ -303,4 +283,31 @@ body.noscroll{
 /* paginated button color  */
 .clicked{
     background-color: #1e1e1e;
+}
+
+/* Style for Static Sublist inside footer-nav-dd */
+/* footer: drop down menu */
+.main-list{
+    list-style-type: none;
+    font-size: 14px;
+    color: var(--black);
+}
+.main-list > li{
+    border-bottom: .6px solid var(--text-color) ; 
+}
+.main-list-item{
+/* .main-list > li > div{ */
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 8px; 
+    align-items: center;
+}
+
+.sub-list{
+    font-size: 14px;
+    padding: 0 16px 8px; 
+}
+.sub-list > li{
+    padding: 6px 0; 
 }
