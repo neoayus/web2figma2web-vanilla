@@ -158,14 +158,24 @@ pagButtons.forEach((button, index)=>{
 });
 
 // Drop Down List toggle cta 
-let ddButton = document.querySelectorAll(".main-list-item") ; 
-ddButton.forEach((btn)=>{
-    btn.addEventListener('touchstart', ()=>{    
-        let subList = btn.nextElementSibling;
-        if(subList.classList.contains('hidden')){
-            subList.classList.remove("hidden");
-        }else if(! subList.classList.contains('hidden')){
-            subList.classList.add("hidden");
-        }
-    });
+// let ddButton = document.querySelectorAll(".main-list-item") ; 
+// ddButton.forEach((btn)=>{
+//     btn.addEventListener('touchstart', ()=>{    
+//         let subList = btn.nextElementSibling;
+//         if(subList.classList.contains('hidden')){
+//             subList.classList.remove("hidden");
+//         }else if(! subList.classList.contains('hidden')){
+//             subList.classList.add("hidden");
+//         }
+//     });
+// });
+// finesse
+document.addEventListener("touchstart", (e) => {
+    const btn = e.target.closest(".main-list-item");
+    if (!btn) return;
+
+    const subList = btn.nextElementSibling;
+    if (!subList) return;
+
+    subList.classList.toggle("hidden");
 });
