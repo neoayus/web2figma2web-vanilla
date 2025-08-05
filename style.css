@@ -225,8 +225,22 @@ footer{
     padding: 16px;
     /* /* allow normal page vertical scrolling when interacting with footer / solved the scroll problem! */
     overflow-y: clip;
+    letter-spacing: 0.4px;
+    line-height: 1.4;
 }
 
+footer .link{
+    text-decoration: underline;
+    color: rgb(65, 65, 65);
+}
+
+footer .blue-link{
+    color: rgb(7, 82, 221);
+}
+
+.footer-bottom-text > ol > li.bold{
+    color: rgb(65, 65, 65);
+}
 /* footer: terms and conditions */
 div > ol{
     list-style-type: none;
@@ -265,7 +279,7 @@ div > ol{
     font-size: 32px; 
     font-weight: 450;
     padding: 30px 0 0 40px; 
-    line-height: 1.4;
+    /* line-height: 1.4; */
 }
 
 /* style for 'new' cross icon */
